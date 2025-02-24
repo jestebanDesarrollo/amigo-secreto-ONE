@@ -1,6 +1,7 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 let inputNombre = document.getElementById('amigo');
 let listaAmigos = document.getElementById('listaAmigos');
+let reiniciarBtn = document.getElementById('reiniciarBtn')
 let resultado = document.getElementById('resultado');
 let amigos = []
 
@@ -29,4 +30,33 @@ function actualizarLista() {
         li.textContent = amigo; //Se le asigna el nombre del amigo al texto <li>
         listaAmigos.appendChild(li);
     });
-}
+};
+
+function sortearAmigo(){
+    if (amigos.length === 0 ){
+        alert("No hay amigos en la lista para sortear.")
+        return;
+    };
+
+    //Limpiar lista de amigos 
+    listaAmigos.innerHTML = "";
+
+    let indexAleatorio = Math.floor(Math.random() * amigos.length);
+    let amigoSorteado = amigos[indexAleatorio];
+
+    //Mostrar el resultado.
+    resultado.innerHTML = `<li>El amigo secreto sorteado es: <strong>${amigoSorteado}</strong></li>`;
+
+    //Habilitar el boton de reinicio
+    reiniciarBtn.disabled = false
+};
+
+function reiniciar(){
+    amigos.length = 0;
+    listaAmigos.innerHTML = "";
+    resultado.innerHTML = "";
+    inputNombre.value = "";
+
+    reiniciarBtn.disabled = true
+};
+
