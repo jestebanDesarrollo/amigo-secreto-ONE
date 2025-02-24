@@ -92,12 +92,15 @@ body {
     width: 300px;
     justify-content: center;
     gap: 20px;
+<<<<<<< HEAD
 }
 
 .button-draw:disabled {
     background-color: #cccccc;
     cursor: not-allowed;
     opacity: 0.6;
+=======
+>>>>>>> a8a00ed0e5102f2cf2da77bb05fed92d01175b8f
 }
 
 /* Estilos de entrada de texto */
