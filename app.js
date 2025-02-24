@@ -46,7 +46,6 @@ function sortearAmigo(){
 
     //Mostrar el resultado.
     resultado.innerHTML = `<li>El amigo secreto sorteado es: <strong>${amigoSorteado}</strong></li>`;
-<<<<<<< HEAD
 
     //Habilitar el boton de reinicio
     reiniciarBtn.disabled = false
@@ -59,7 +58,5 @@ function reiniciar(){
     inputNombre.value = "";
 
     reiniciarBtn.disabled = true
-=======
->>>>>>> a8a00ed0e5102f2cf2da77bb05fed92d01175b8f
 };
 
