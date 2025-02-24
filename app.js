@@ -16,9 +16,17 @@ function agregarAmigo() {
 
     inputNombre.value = "";
 
+    actualizarLista()
 
 };
 
 function actualizarLista() {
+    listaAmigos.innerHTML = "";
 
+    //Se crea para recorrer el array de amigos y agregar cada uno como un <li> en la lista
+    amigos.forEach((amigo, index) => {
+        const li = document.createElement('li');
+        li.textContent = amigo; //Se le asigna el nombre del amigo al texto <li>
+        listaAmigos.appendChild(li);
+    });
 }
